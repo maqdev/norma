@@ -11,3 +11,14 @@ project/plugins/project/
 
 # Scala-IDE specific
 .scala_dependencies
+
+# os x shit
+.DS_Store
+
+# intelij idea files
+project/project/
+project/target/
+.idea/workspace.xml
+.idea/tasks.xml
+lib/
+out/
