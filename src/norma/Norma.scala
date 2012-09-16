@@ -78,6 +78,14 @@ object Column {
     }
   }
 
+  implicit def rowToFloat: Column[Float] = Column.nonNull { (value, meta) =>
+    val MetaDataItem(qualified, nullable, clazz) = meta
+    value match {
+      case f: Float => Right(f)
+      case _ => Left(TypeDoesNotMatch("Cannot convert " + value + ":" + value.asInstanceOf[AnyRef].getClass + " to Float for column " + qualified))
+    }
+  }
+
   implicit def rowToShort: Column[Short] = Column.nonNull { (value, meta) =>
     val MetaDataItem(qualified, nullable, clazz) = meta
     value match {
