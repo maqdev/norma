@@ -1,3 +1,11 @@
 Manifest-Version: 1.0
-Class-Path: scala-library-2.9.1.jar
+Bundle-Name: Norma
+Implementation-Vendor: maqdev
+Implementation-Title: Norma
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: norma
+Specification-Vendor: maqdev
+Specification-Title: Norma
+Implementation-URL: https://github.com/maqdev/norma/
+Specification-Version: 1.0.0
 

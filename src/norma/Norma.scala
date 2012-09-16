@@ -321,6 +321,7 @@ object ToStatement {
     private def setAny(index: Int, value: Any, stmt: java.sql.PreparedStatement): java.sql.PreparedStatement = {
       value match {
         case Some(bd: java.math.BigDecimal) => stmt.setBigDecimal(index, bd)
+        case Some(b: Array[Byte]) => stmt.setBytes(index, b)
         case Some(o) => stmt.setObject(index, o)
         case None => stmt.setObject(index, null)
         case bd: java.math.BigDecimal => stmt.setBigDecimal(index, bd)
@@ -336,6 +337,10 @@ object ToStatement {
   implicit val dateToStatement = new ToStatement[java.util.Date] {
     def set(s: java.sql.PreparedStatement, index: Int, aValue: java.util.Date): Unit = s.setTimestamp(index, new java.sql.Timestamp(aValue.getTime()))
 
+  }
+
+  implicit val byteArrayToStatement = new ToStatement[Array[Byte]] {
+    def set(s: java.sql.PreparedStatement, index: Int, aValue: Array[Byte]): Unit = s.setBytes(index, aValue)
   }
 
   implicit def optionToStatement[A](implicit ts: ToStatement[A]): ToStatement[Option[A]] = new ToStatement[Option[A]] {

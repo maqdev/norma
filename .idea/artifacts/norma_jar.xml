@@ -1,14 +1,11 @@
 <component name="ArtifactManager">
-  <artifact name="norma:jar">
+  <artifact type="jar" name="norma:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/norma_jar</output-path>
-    <root id="root">
-      <element id="archive" name="norma.jar">
-        <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-        </element>
-        <element id="module-output" name="norma" />
+    <root id="archive" name="norma_jar.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       </element>
-      <element id="library" level="application" name="org.scala-lang:scala-library:2.9.1" />
+      <element id="module-output" name="norma" />
     </root>
   </artifact>
 </component>
