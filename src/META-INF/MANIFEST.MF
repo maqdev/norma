@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-Name: Norma
 Implementation-Vendor: maqdev
 Implementation-Title: Norma
-Implementation-Version: 1.0.0
+Implementation-Version: 1.0.1
 Implementation-Vendor-Id: norma
 Specification-Vendor: maqdev
 Specification-Title: Norma

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/norma.iml" filepath="$PROJECT_DIR$/norma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../norma.jodatime/norma.jodatime.iml" filepath="$PROJECT_DIR$/../norma.jodatime/norma.jodatime.iml" />
+      <module fileurl="file://$PROJECT_DIR$//norma.jodatime.iml" filepath="$PROJECT_DIR$//norma.jodatime.iml" />
     </modules>
   </component>
 </project>
